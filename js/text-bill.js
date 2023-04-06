@@ -5,15 +5,6 @@ const addToBillBtn = document.querySelector(".addToBillBtn");
 //create a variable that will keep track of the total bill
 const totalBill =  parseFloat(document.querySelector('.totalOne').textContent);
 const totalDivTwo = document.querySelector(".totalDivTwo");
-    if (totalBill >= 50) {
-      totalDivTwo.classList.remove("warning");
-      totalDivTwo.classList.add("danger");
-    } else if (totalBill >= 30) {
-      totalDivTwo.classList.remove("danger");
-      totalDivTwo.classList.add("warning");
-    } else {
-      totalDivTwo.classList.remove("warning", "danger");
-    }
 //add an event listener for when the add button is pressed
 
 addToBillBtn.addEventListener('click',function(){
