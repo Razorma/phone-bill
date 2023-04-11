@@ -25,7 +25,7 @@ updateSettings.addEventListener('click',function(){
     smsCost = parseFloat(smsCostSetting.value);
     warningCost = parseFloat(warningLevelSetting.value);
     criticalCost = parseFloat(criticalLevelSetting.value);
-
+    
     const totalCostElem2 = document.querySelector(".totalCostElem2");
     const totalSettings = document.querySelector(".totalSettings");
     var totalCost = parseFloat(totalSettings.innerHTML);
@@ -80,7 +80,6 @@ function textBillTotal(){
 }
 radioBillAddBtnWithSettings.addEventListener('click', textBillTotal);
 
-
 const resetRadioBillBtnSettings = document.querySelector(".resetRadioBillBtnSettings");
 resetRadioBillBtnSettings.addEventListener('click',function(){
   let total = 0;
@@ -109,6 +108,7 @@ resetRadioBillBtnSettings.addEventListener('click',function(){
         } else {
           totalCostElem2.classList.remove("warning", "danger");
         }
-
+        callsTotalSetting =0;
+        smsTotalSetting =0;
 })
 
