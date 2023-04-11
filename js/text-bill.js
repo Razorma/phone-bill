@@ -44,7 +44,7 @@ addToBillBtn.addEventListener('click',function(){
 });
 
 
-// * add nothing for invalid values that is not 'call' or 'sms'.
+
 
 const resetBillBtn = document.querySelector(".resetBillBtn");
 resetBillBtn.addEventListener('click',function add(){

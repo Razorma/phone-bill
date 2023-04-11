@@ -42,10 +42,8 @@ function textBillTotal(){
       }
 }
 radioBillAddBtn.addEventListener('click', textBillTotal);
-//in the event listener get the value from the billItemTypeRadio radio buttons
-// * add the appropriate value to the running total
-// * add nothing for invalid values that is not 'call' or 'sms'.
-// * display the latest total on the screen
+
+
 const resetRadioBillBtn = document.querySelector(".resetRadioBillBtn");
 resetRadioBillBtn.addEventListener('click',function(){
   let total = 0;

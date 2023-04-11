@@ -25,7 +25,7 @@ updateSettings.addEventListener('click',function(){
     smsCost = parseFloat(smsCostSetting.value);
     warningCost = parseFloat(warningLevelSetting.value);
     criticalCost = parseFloat(criticalLevelSetting.value);
-    
+
     const totalCostElem2 = document.querySelector(".totalCostElem2");
     const totalSettings = document.querySelector(".totalSettings");
     var totalCost = parseFloat(totalSettings.innerHTML);
@@ -79,12 +79,8 @@ function textBillTotal(){
       }
 }
 radioBillAddBtnWithSettings.addEventListener('click', textBillTotal);
-//in the event listener get the value from the billItemTypeRadio radio buttons
-// * add the appropriate value to the call / sms total
-// * add the appropriate value to the overall total
-// * add nothing for invalid values that is not 'call' or 'sms'.
-// * display the latest total on the screen.
-// * check the value thresholds and display the total value in the right color.
+
+
 const resetRadioBillBtnSettings = document.querySelector(".resetRadioBillBtnSettings");
 resetRadioBillBtnSettings.addEventListener('click',function(){
   let total = 0;

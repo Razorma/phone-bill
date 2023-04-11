@@ -34,7 +34,8 @@ function totalPhoneBill(){
         totalDiv.classList.remove("warning", "danger");
       }
 };
-//link the function to a click event on the calculate button
+
+
 calculateButton.addEventListener('click',totalPhoneBill)
 resetButton.addEventListener('click',function(){
   let total = 0;
