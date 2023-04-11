@@ -82,6 +82,14 @@
               >
                 Calculate
               </button>
+              <button
+                class="button-primary resetBtn"
+                on
+                type="button"
+                name="button"
+              >
+                Reset
+              </button>
             </div>
             <div class="four columns totalDiv">
               <strong>Total amount:</strong>
@@ -127,6 +135,13 @@
                 name="button"
               >
                 Add
+              </button>
+              <button
+                class="button-primary resetBillBtn"
+                type="button"
+                name="button"
+              >
+                Reset
               </button>
             </div>
             <div class="six columns">
@@ -179,7 +194,7 @@
               <label class="">
                 <input
                   type="radio"
-                  name="billItemType"
+                  name="billItemTypeRadio"
                   class="billItemTypeRadio"
                   value="call"
                 />
@@ -188,19 +203,26 @@
               <label class="">
                 <input
                   type="radio"
-                  name="billItemType"
+                  name="billItemTypeRadio"
                   class="billItemTypeRadio"
-                  value="call"
+                  value="sms"
                 />
                 <span class="label-body">SMS</span>
               </label>
               <button
                 class="button-primary radioBillAddBtn"
                 type="button"
-                name="button"
+                name="billItemType"
                 value="sms"
               >
                 Add
+              </button>
+              <button
+                class="button-primary resetRadioBillBtn"
+                type="button"
+                name="button"
+              >
+                Reset
               </button>
             </div>
             <div class="six columns">
@@ -321,6 +343,13 @@
                 name="button"
               >
                 Update settings
+              </button>
+              <button
+                class="button-primary resetRadioBillBtnSettings"
+                type="button"
+                name="button"
+              >
+                Reset
               </button>
             </div>
           </div>

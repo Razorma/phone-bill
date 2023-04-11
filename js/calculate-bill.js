@@ -1,10 +1,10 @@
 //get a reference to the calculate button
 const calculateButton = document.querySelector(".calculateBtn");
+const resetButton = document.querySelector(".resetBtn");
 //get a reference to the billTotal element
 const billTotal = document.querySelector(".billTotal");
 //get a reference to the billString
 const billStringElement = document.querySelector(".billString");
-
 //create the function that will be called when the calculate button is pressed
 function totalPhoneBill(){
     const totalDiv = document.querySelector(".totalDiv");
@@ -15,9 +15,9 @@ function totalPhoneBill(){
 //  * loop over all the entries in the the resulting list
     for(var i=0;i<allPhone.length;i++){
 //  * check if it is a call or an sms and add the right amount to the overall total
-      if(allPhone[i].trim() === 'call'){
+      if(allPhone[i].trim().toLowerCase() === 'call'){
          counter1++;
-       }else if(allPhone[i].trim() === 'sms'){
+       }else if(allPhone[i].trim().toLowerCase() === 'sms'){
         counter2++;
        };
      };
@@ -36,3 +36,11 @@ function totalPhoneBill(){
 };
 //link the function to a click event on the calculate button
 calculateButton.addEventListener('click',totalPhoneBill)
+resetButton.addEventListener('click',function(){
+  let total = 0;
+  billStringElement.value = '';
+  billTotal.innerHTML = total.toFixed(2);
+  const totalDiv = document.querySelector(".totalDiv");
+  totalDiv.classList.remove("warning", "danger");
+
+})

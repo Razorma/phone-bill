@@ -25,6 +25,19 @@ updateSettings.addEventListener('click',function(){
     smsCost = parseFloat(smsCostSetting.value);
     warningCost = parseFloat(warningLevelSetting.value);
     criticalCost = parseFloat(criticalLevelSetting.value);
+    
+    const totalCostElem2 = document.querySelector(".totalCostElem2");
+    const totalSettings = document.querySelector(".totalSettings");
+    var totalCost = parseFloat(totalSettings.innerHTML);
+    if (totalCost >= criticalCost) {
+        totalCostElem2.classList.remove("warning");
+        totalCostElem2.classList.add("danger");
+      } else if (totalCost >= warningCost) {
+        totalCostElem2.classList.remove("danger");
+        totalCostElem2.classList.add("warning");
+      } else {
+        totalCostElem2.classList.remove("warning", "danger");
+      }
   });
   
 //add an event listener for when the add button is pressed
@@ -44,7 +57,6 @@ function textBillTotal(){
     }
     else if (billItemType === "sms"){
         smsTotalSetting += smsCost;
-        console.log(smsTotal)
     }
     
     //update the totals that is displayed on the screen.
@@ -73,3 +85,34 @@ radioBillAddBtnWithSettings.addEventListener('click', textBillTotal);
 // * add nothing for invalid values that is not 'call' or 'sms'.
 // * display the latest total on the screen.
 // * check the value thresholds and display the total value in the right color.
+const resetRadioBillBtnSettings = document.querySelector(".resetRadioBillBtnSettings");
+resetRadioBillBtnSettings.addEventListener('click',function(){
+  let total = 0;
+  const callTotalSettings = document.querySelector(".callTotalSettings");
+  const smsTotalSettings = document.querySelector(".smsTotalSettings");
+  const totalSettings = document.querySelector(".totalSettings");
+
+  callTotalSettings.innerHTML = total.toFixed(2);
+  smsTotalSettings.innerHTML = total.toFixed(2);
+    var totalCost = total.toFixed(2);
+    totalSettings.innerHTML = total.toFixed(2);
+    const totalCostElem2 = document.querySelector(".totalCostElem2");
+
+      callCostSetting.value ="";
+      smsCostSetting.value ="";
+      warningLevelSetting.value="";
+      criticalLevelSetting.value="";
+    
+      var totalCost = parseFloat(totalSettings.innerHTML);
+      if (totalCost >= criticalCost) {
+          totalCostElem2.classList.remove("warning");
+          totalCostElem2.classList.add("danger");
+        } else if (totalCost >= warningCost) {
+          totalCostElem2.classList.remove("danger");
+          totalCostElem2.classList.add("warning");
+        } else {
+          totalCostElem2.classList.remove("warning", "danger");
+        }
+
+})
+
