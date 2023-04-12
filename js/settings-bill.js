@@ -99,7 +99,8 @@ resetRadioBillBtnSettings.addEventListener('click',function(){
       criticalLevelSetting.value="";
 
       totalCostElem2.classList.remove("warning", "danger");
-
+        callCost = 0;
+        smsCost = 0;
         callsTotalSetting =0;
         smsTotalSetting =0;
 })
