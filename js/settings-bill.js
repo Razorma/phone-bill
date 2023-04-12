@@ -97,17 +97,9 @@ resetRadioBillBtnSettings.addEventListener('click',function(){
       smsCostSetting.value ="";
       warningLevelSetting.value="";
       criticalLevelSetting.value="";
-    
-      var totalCost = parseFloat(totalSettings.innerHTML);
-      if (totalCost >= criticalCost) {
-          totalCostElem2.classList.remove("warning");
-          totalCostElem2.classList.add("danger");
-        } else if (totalCost >= warningCost) {
-          totalCostElem2.classList.remove("danger");
-          totalCostElem2.classList.add("warning");
-        } else {
-          totalCostElem2.classList.remove("warning", "danger");
-        }
+
+      totalCostElem2.classList.remove("warning", "danger");
+
         callsTotalSetting =0;
         smsTotalSetting =0;
 })
