@@ -30,7 +30,7 @@ describe('textBillTotal', function() {
       results.calculateBill('call');
       results.calculateBill('call');
       
-      assert.equal(results.getTotals().calls, '30.25');
+      assert.equal(results.getTotals().total, '30.25');
       assert.equal(results.getColor(), 'warning');
     });
     it('should return danger level if the total  exceed R50.00 ', function() {
@@ -55,7 +55,7 @@ describe('textBillTotal', function() {
       results.calculateBill('call');
       results.calculateBill('call');
       
-      assert.equal(results.getTotals().calls, '52.25');
+      assert.equal(results.getTotals().total, '52.25');
       assert.equal(results.getColor(), 'danger');
     });
   });

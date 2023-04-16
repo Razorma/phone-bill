@@ -5,9 +5,9 @@ function textBillTotal() {
   let smsTotal = 0;
 
   function calculateBill(billItemType) {
-    if (billItemType === "call") {
+    if (billItemType.toLowerCase() === "call") {
       callsTotal += 2.75;
-    } else if (billItemType === "sms") {
+    } else if (billItemType.toLowerCase() === "sms") {
       smsTotal += 0.75;
     }
   }
