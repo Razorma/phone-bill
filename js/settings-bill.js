@@ -2,8 +2,6 @@
 function radioBillTotalSettings(){ 
     var callCost = 0;
     var smsCost = 0;
-    var warningCost = 0;
-    var criticalCost = 0;
   
     var callsTotalSetting = 0;
     var smsTotalSetting = 0;
