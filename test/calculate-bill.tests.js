@@ -14,9 +14,9 @@ describe('totalPhoneBill', function() {
   });
 
   it('should set the danger level to "warning" when the total phone bill is between 20 and 30', function() {
-    const result = totalPhoneBill('call,call,call,sms,sms');
-    assert.equal(result.total, '9.75');
-    assert.equal(result.dangerLevel, '');
+    const result = totalPhoneBill('call,call,call,sms,sms,call,call,call,sms,sms,call');
+    assert.equal(result.total, '22.25');
+    assert.equal(result.dangerLevel, 'warning');
   });
 
   it('should set the danger level to "danger" when the total phone bill is 30 or more', function() {
